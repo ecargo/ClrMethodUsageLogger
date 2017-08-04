@@ -8,7 +8,7 @@ The CLR uses ETW to output useful logging information; this app hooks in to ETW 
 
 Limitations
 ===========
-This logs JITting of each method; each method is only JITted one. Obviously if this app is started after JITting has already taken place then the outputted information will not be complete.
+This logs JITting of each method; each method is only JITted once. Obviously if this app is started after JITting has already taken place then the outputted information will not be complete.
 
 The assembly filtering is the provided by hooking in to a different ETW event (`ModuleLoad` as opposed to `JittingStarted`). If the module (assembly) has already been loaded prior to this app starting, even if no JITting has taken place, then the assembly output and filtering won't function.
 
